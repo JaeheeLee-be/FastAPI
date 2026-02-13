@@ -33,7 +33,7 @@ jobs:
           poetry run ruff check
 
       - name: Run Mypy
-        run: poetry run mypy . || true  # 실패해도 계속 진행
+        run: poetry run mypy . || true
 
   test:
     runs-on: ubuntu-22.04
