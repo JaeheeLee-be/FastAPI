@@ -1,5 +1,5 @@
--- poetry --
-poetry는 프로젝트 단위로 가상환경을 자동으로 생성하고 관리하고 poetry는
+-- poetry --<br>
+poetry는 프로젝트 단위로 가상환경을 자동으로 생성하고 관리하고 poetry는<br>
 pyproject.toml 파일에서 의존성을 관리하고 poetry.rock 파일을 통해 반복 가능한 설치를 보장하기 때문에
 python의 가상환경인 venv 같은 별도의 가상환경 관리도구 없이도 구축할 수 있습니다.
 설치방법: (터미널에서) pip install poetry
