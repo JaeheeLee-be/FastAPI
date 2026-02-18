@@ -1,5 +1,5 @@
-from typing import Final
 import string
+from typing import Final
 
 
 class Base62:
