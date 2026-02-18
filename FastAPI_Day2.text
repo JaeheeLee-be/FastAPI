@@ -30,4 +30,3 @@ API를 정확하고 기계가 이해할 수 있는 문서형태로 정의한 것
 라우터는 URL과 함수를 연결해주는 장치, 프로젝트가 커지면 APIRouter를 사용하며, Depends, HTTPException, status가 있고 정리를 하자면
 APIRouter(URL들을 묶어줌), Depends(공통 로직을 자동 실행), HTTPException(에러 처리), status(상태 코드 관리) 이렇게 구성하는 이유는
 코드가 깔끔해지고 기능별로 파일 분리가 가능하며, 인증/DB 연결 같은 공통 로직 재사용이 가능, 프로젝트가 크더라도 유지/보수가 쉽기 때문입니다.
-
