@@ -1,6 +1,7 @@
 import string
 from typing import Final, ClassVar
 
+
 class Base62:
     BASE: Final[str] = string.ascii_letters + string.digits
     BASE_LEN: Final[int] = len(BASE)
