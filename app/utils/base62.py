@@ -1,5 +1,5 @@
 import string
-from typing import Final, ClassVar
+from typing import ClassVar, Final
 
 
 class Base62:
