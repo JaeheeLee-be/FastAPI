@@ -1,0 +1,17 @@
+--- Query Plan ---
+DB가 쿼리를 어떻게 실행할지를 정한 실행 전략이다. 같은 쿼리라도 인덱스를 사용하면 빠르지만 전체 테이블을 스캔하는 것은
+느리기 때문, Query Plan에는 인덱스 사용 여부, Join 방식, 예상 비용(cost), 실행 순서를 알 수 있다.
+
+--- Transaction ---
+여러 DB 작업을 하나의 묶음으로 처리하는 것(전부 성공하거나 전부 실패하거나) tortoise-orm에서는 에러 발생(자동 rollback)
+, 정상 종료(자동 commit)으로 작동되고 로그인 관련(실패횟수 증가 + 계정 잠금처리), 주문 관련(주문 생성 + 재고 감소), 계좌이체
+등 여러 DB 작업이 묶어야 할 때 사용한다.
+
+--- prefetch_related, select_related ---
+prefetch_related: User 조회, Post 한 번에 조회, Python에서 매칭, 1:N 관계에 적합, JOIN 폭발 방지
+select_related: SQL_JOIN 사용, 한 번의 쿼리, 1:1 또는 FK 관계에 적합, 빠르고 효율적 하지만 데이터가 많으면 JOIN 결과카 커질 수 있음
+
+--- DateBase Index ---
+데이터를 빨리 찾기 위해 색인표(검색 속도를 빠르게 하는 구조) Index가 없으면 테이블 전체를 스캔해야 하지만 Index가 있으면
+인덱스 트리(B-Tree 등)에서 빠르게 위치 탐색, 해당 row로 바로 접근, 하지만 Index는 INSERT, UPDATE, DELETE 시 추가 비용 발생
+저장 공간 차지, 너무 많이 생성하면 오히려 느려지는 단점이 있다.
